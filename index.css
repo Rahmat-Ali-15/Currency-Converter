@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent_container{
+    width: 100%;
+    height: 100vh;
+    background-color: #f4e4ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_container{
+    height: 53vh;
+    width: 50vh;
+    background-color: white;
+    padding: 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.content_container>h1{
+    font-size: 1.5rem;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.15rem;
+}
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select_container{
+    padding: 0.15rem 0.40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+}
+.select_container img{
+    width: 2rem;
+}
+.select_container select{
+    font-size: 1rem;
+}
+.select_container select,input,.btn{
+    border: none;
+    outline: none;
+}
+.select_container,input{
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+input{
+    padding: 0.75rem;
+    font-size: 1.15rem;
+}
+
+i{
+    margin-top: 15px;
+}
+.msg{
+    font-size: 1.15rem;
+}
+.btn{
+    padding: 0.70rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #af4d98;
+    border-radius: 0.75rem;
+    cursor: pointer;
+}
