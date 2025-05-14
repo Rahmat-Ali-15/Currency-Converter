@@ -1,7 +1,5 @@
-const api_key = "cur_live_dGFuGM2iKYXObBF0qwscbunXATrFjxA1UgRe7uGt";
-
-const base_url = `https://api.currencyapi.com/v3/latest?apikey=${api_key}&currencies`
-
+const api_key = `845b3dcb40dedcd38c8dce4a4d24383d`;
+const base_url = `http://apilayer.net/api/live?access_key=${api_key}&currencies=INR,EUR&source=USD&format=1`;
 
 const SelectOption = document.querySelectorAll(".select");
 const btn = document.querySelector("form button");
@@ -47,10 +45,11 @@ window.addEventListener("load", () => {
   updateExchangeRate()
 })
 
-const exchangeIcon = document.querySelector(".fa-right-left");  // Select the exchange icon
+ // Select the exchange icon
+const exchangeIcon = document.querySelector(".fa-right-left"); 
 
-// Add event listener to the exchange icon (Only add it once)
 exchangeIcon.addEventListener("click", () => {
+
   // Get current selected currencies
   let fromCurrencyValue = fromCurrency.value;
   let toCurrencyValue = toCurrency.value;
@@ -76,14 +75,14 @@ const updateExchangeRate = async () => {
     amount.value = "1";
   };
 
-  const url = `${base_url}&base_currency=${fromCurrency.value}&currencies=${toCurrency.value}`;
+  const url = `${base_url}&currencies=${toCurrency.value}&source=${fromCurrency.value}&format=1`;
 
   try {
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
-    let rate = data.data[toCurrency.value].value;
-    let finalAmt = amtVal * rate;
+    let rateKey = fromCurrency.value + toCurrency.value;
+    let rate = data.quotes[rateKey];
+    let finalAmt = (amtVal * rate).toFixed(2);
     msg.innerText = `${amtVal} ${fromCurrency.value} = ${finalAmt} ${toCurrency.value}`
   }
   catch (error) {
