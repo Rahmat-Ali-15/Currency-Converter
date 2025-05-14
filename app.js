@@ -1,5 +1,5 @@
 const api_key = `845b3dcb40dedcd38c8dce4a4d24383d`;
-const base_url = `http://apilayer.net/api/live?access_key=${api_key}&currencies=INR,EUR&source=USD&format=1`;
+const base_url = `https://apilayer.net/api/live?access_key=${api_key}&currencies=INR,EUR&source=USD&format=1`;
 
 const SelectOption = document.querySelectorAll(".select");
 const btn = document.querySelector("form button");
