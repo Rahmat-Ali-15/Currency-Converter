@@ -6,14 +6,15 @@
 .parent_container{
     width: 100%;
     height: 100vh;
+    padding: 20px;
     background-color: #f4e4ba;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .content_container{
-    height: 53vh;
-    width: 50vh;
+    max-height: 100vh;
+    max-width: 100%;
     background-color: white;
     padding: 2rem;
     border: none;
