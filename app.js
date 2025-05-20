@@ -27,6 +27,7 @@ for (let Select of SelectOption) {
   });
 }
 
+// update flag
 const updateFlag = (element) => {
   let currencyCode = element.value;
   let countryCode = countryList[currencyCode];
@@ -45,8 +46,8 @@ window.addEventListener("load", () => {
   updateExchangeRate()
 })
 
- // Select the exchange icon
-const exchangeIcon = document.querySelector(".fa-right-left"); 
+// Select the exchange icon
+const exchangeIcon = document.querySelector(".fa-right-left");
 
 exchangeIcon.addEventListener("click", () => {
 
